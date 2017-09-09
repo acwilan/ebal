@@ -1,0 +1,9 @@
+<tr>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td>
+    <%= link_to user, title: 'Ver' do %><i class="fa fa-eye"></i><% end %>
+    <%= link_to edit_user_path(user), title: 'Editar' do %><i class="fa fa-pencil"></i><% end %>
+    <%= link_to user, title: 'Eliminar', method: :delete, data: { confirm: 'Está seguro de eliminar este usuario?' } do %><i class="fa fa-trash"></i><% end %>
+  </td>
+</tr>

@@ -1,0 +1,30 @@
+<header class="main-header">
+  <%= link_to root_path, class: 'logo' do %>
+    <span class="logo-mini">EbAl</span><span class="logo-lg">Ebenezer Alabanza</span>
+  <% end %>
+  <nav class="navbar navbar-static-top" role="navigation">
+    <%= link_to '#', class: 'sidebar-toggle', data: { toggle: 'offcanvas' }, role: 'button' do %>
+      <span class="sr-only">Toggle navigation</span>
+    <% end %>
+    
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown messages-menu">
+          <%= render 'layouts/menu/messages' %>
+        </li>
+        <li class="dropdown notifications-menu">
+          <%= render 'layouts/menu/notifications' %>
+        </li>
+        <li class="dropdown tasks-menu">
+          <%= render 'layouts/menu/tasks' %>
+        </li>
+        <li class="dropdown user user-menu">
+          <%= render 'layouts/menu/user' %>
+        </li>
+        <li>
+          <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

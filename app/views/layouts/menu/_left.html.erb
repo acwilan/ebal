@@ -1,0 +1,38 @@
+<ul class="sidebar-menu">
+  <li class="header">MEN&Uacute; PRINCIPAL</li>
+  <li class="treeview">
+    <%= link_to '#' do %>
+    <i class="fa fa-key"></i> <span>Seguridad</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+    <% end %>
+    <ul class="treeview-menu">
+      <li><%= link_to 'Usuarios', users_path %></li>
+    </ul>
+  </li>
+  <li class="treeview">
+    <%= link_to '#' do %>
+    <i class="fa fa-gears"></i> <span>Cat&aacute;logos</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+    <% end %>
+    <ul class="treeview-menu">
+      <li><%= link_to 'Categorías de instrumentos', instrument_categories_path %></li>
+      <li><%= link_to 'Instrumentos', instruments_path %></li>
+    </ul>
+  </li>
+  <li class="treeview">
+    <%= link_to '#' do %>
+    <i class="fa fa-user"></i> <span>Personas</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+    <% end %>
+    <ul class="treeview-menu">
+      <li><%= link_to 'Miembros', '#' %></li>
+      <li><%= link_to 'Coordinadores', '#' %></li>
+    </ul>
+  </li>
+</ul>

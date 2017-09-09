@@ -1,0 +1,7 @@
+<tr>
+  <td><%= instrument_category.name %></td>
+  <td>
+    <%= link_to edit_instrument_category_path(instrument_category), title: 'Editar' do %><i class="fa fa-pencil"></i><% end %>
+    <%= link_to instrument_category, title: 'Eliminar', method: :delete, data: { confirm: 'Está seguro de eliminar esta categoría de instrumento?' } do %><i class="fa fa-trash"></i><% end %>
+  </td>
+</tr>

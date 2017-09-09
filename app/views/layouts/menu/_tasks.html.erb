@@ -1,0 +1,29 @@
+<%= link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do %>
+  <i class="fa fa-flag-o"></i>
+  <span class="label label-danger"><%= user_tasks.size %></span>
+<% end %>
+<ul class="dropdown-menu">
+  <li class="header">Tienes <%= user_tasks.size %> tareas</li>
+  <li>
+    <ul class="menu">
+      <% user_tasks.each do |task| %>
+      <li>
+        <%= link_to '#' do %>
+        <h3>
+          <%= task.title %>
+          <small class="pull-right"><%= task.progress %>%</small>
+        </h3>
+        <div class="progress xs">
+          <div class="progress-bar progress-bar-aqua" style="width: <%= task.progress %>%"
+               role="progressbar" aria-valuenow="<%= task.progress %>" aria-valuemin="0"
+               aria-valuemax="100">
+              <span class="sr-only"><%= task.progress %>% Completado</span>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+  <li class="footer"><%= link_to 'Ver todas las tareas', '#' %></li>
+</ul>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+guitarra:
+  name: Guitarra
+  instrument_category: cuerdas
+
+saxofon:
+  name: Saxofon
+  instrument_category: vientos

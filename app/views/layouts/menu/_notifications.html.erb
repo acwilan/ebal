@@ -1,0 +1,21 @@
+<%= link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do %>
+  <i class="fa fa-bell-o"></i>
+  <span class="label label-warning"><%= user_notifications.size %></span>
+<% end %>
+<ul class="dropdown-menu">
+  <li class="header">Tiene <%= user_notifications.size %> notificaciones</li>
+  <li>
+    <ul class="menu">
+      <% user_notifications.each do |notification| %>
+      <li>
+        <%= link_to '#' do %>
+          <i class="fa fa-users text-<%= notification.color %>"></i> <%= notification.title %>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+  <li class="footer">
+    <%= link_to 'Ver todas las notificaciones', '#' %>
+  </li>
+</ul>

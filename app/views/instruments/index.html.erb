@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header">
+		<h3>Todos los instrumentos</h3>
+      </div>
+      <div class="box-body">
+		<%= link_to 'Crear nuevo instrumento', new_instrument_path, class: 'btn btn-primary' %>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead><tr>
+              <th>Nombre</th>
+              <th>Categor&iacute;a</th>
+              <th>Acciones</th>
+            </tr></thead>
+            <tbody>
+              <%= render @instruments %>
+            </tbody>
+          </table>
+        </div>
+        <%= will_paginate %>
+      </div>
+    </div>
+  </div>
+</div>

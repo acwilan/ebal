@@ -1,0 +1,31 @@
+<%= link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do %>
+  <%= gravatar_for(current_user, { size: 160, class: 'user-image' }) %>
+  <span class="hidden-xs"><%= current_user.name %></span>
+<% end %>
+<ul class="dropdown-menu">
+  <li class="user-header">
+    <%= gravatar_for(current_user, { size: 160, class: 'user-image' }) %>
+    <p><%= current_user.name %>
+      <small>Miembro desde hace <%= time_ago_in_words(current_user.created_at) %>.</small>
+    </p>
+  </li>
+  <!--li class="user-body">
+      <div class="col-xs-4 text-center">
+          <a href="#">Followers</a>
+      </div>
+      <div class="col-xs-4 text-center">
+          <a href="#">Sales</a>
+      </div>
+      <div class="col-xs-4 text-center">
+          <a href="#">Friends</a>
+      </div>
+  </li-->
+  <li class="user-footer">
+    <div class="pull-left">
+      <%= link_to 'Perfil', '#', class: 'btn btn-default btn-flat' %>
+    </div>
+    <div class="pull-right">
+      <%= link_to 'Cerrar sesión', '#', class: 'btn btn-default btn-flat', data: { method: 'delete' } %>
+    </div>
+  </li>
+</ul>

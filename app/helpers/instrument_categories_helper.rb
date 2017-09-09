@@ -1,0 +1,2 @@
+module InstrumentCategoriesHelper
+end
