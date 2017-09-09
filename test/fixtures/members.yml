@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+andres:
+  first_name: Andres
+  last_name: Rovira
+  full_name: Andres Rovira
+  gender: M
+  email: andres.rovira@gmail.com
+  birthday: 1983-03-28
+  phone: 52008648
+  joined_at: 2009-02-01
+  user: andres
+
+nelly:
+  first_name: Nelly
+  last_name: Raxon
+  full_name: Nelly Raxon
+  gender: F
+  email: nellyraxon@gmail.com
+  birthday: 1982-11-12
+  phone: 40478169
+  joined_at: 2011-01-01
+  user: nelly

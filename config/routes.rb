@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :users
 	resources :instrument_categories
 	resources :instruments
+	resources :members
 end

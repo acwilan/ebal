@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header">
+		<h3>Agregar nuevo miembro</h3>
+      </div>
+	  <%= form_for(@member, role: 'form') do |f|  %>
+		<div class="box-body">
+		  <%= render 'shared/error_messages', object: f.object %>
+		  <div class="form-group">
+			<%= f.label :first_name, class: 'control-label' %>
+			<%= f.text_field :first_name, class: 'form-control' %>
+		  </div>
+		  <div class="form-group">
+			<%= f.label :last_name, class: 'control-label' %>
+			<%= f.text_field :last_name, class: 'form-control' %>
+		  </div>
+        </div>
+		<div class="box-footer">
+		  <%= f.submit 'Guardar', class: 'btn btn-primary' %>
+		  <%= link_to 'Cancelar', members_path, class: 'btn btn-link' %>
+		</div>
+	  <% end %>
+    </div>
+  </div>
+</div>

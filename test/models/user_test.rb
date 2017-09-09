@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
 
   def setup
-    @user = User.new(name: "Test User", email: "example@email.com")
+    @user = User.new(name: "Test User", email: "example@email.com", member: members(:andres))
   end
   
   test "should be valid" do
@@ -35,5 +35,10 @@ class UserTest < ActiveSupport::TestCase
     @user.email = "test"
     assert_not @user.valid?
   end
-  
+	
+	test "user_id can be nil" do
+		@user.member = nil
+		assert @user.valid?
+	end
+	
 end

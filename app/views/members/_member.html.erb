@@ -1,0 +1,7 @@
+<tr>
+  <td><%= member.full_name %></td>
+  <td>
+    <%= link_to edit_member_path(member), title: 'Editar' do %><i class="fa fa-pencil"></i><% end %>
+    <%= link_to member, title: 'Eliminar', method: :delete, data: { confirm: 'Está seguro de eliminar este miembro?' } do %><i class="fa fa-trash"></i><% end %>
+  </td>
+</tr>
